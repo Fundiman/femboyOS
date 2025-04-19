@@ -18,4 +18,4 @@ shove the iso into a vm or your computer if you’re feeling lucky.
 
 ---
 
-plz check out CONTRIBUTING.md :3
+plz check out <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> :3
