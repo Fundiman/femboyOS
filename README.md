@@ -1,6 +1,6 @@
 # femboyOS
 
-my attempt at making an os :3
+improved version of ploszukiwacz attept at making an os :3
 
 ## WARNING
 this is held together with duct tape and prayers.  
