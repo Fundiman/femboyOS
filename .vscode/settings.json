@@ -7,6 +7,7 @@
         "*.old": "c",
         "string.h": "c",
         "panic.h": "c",
-        "command_registry.h": "c"
+        "command_registry.h": "c",
+        "hardtest.h": "c"
     }
 }

@@ -13,6 +13,7 @@
 #include "hardtest/hardtest.h"
 #include "keytest/keytest.h"
 #include "clear/clear.h"
+#include "uwu/uwu.h"
 
 static command_t command_registry[MAX_COMMANDS];
 static int command_count = 0;
@@ -28,7 +29,8 @@ static void (*command_init_functions[])() = {
     CMD_init_fortune,
     CMD_init_hardtest,
     CMD_init_keytest,
-    CMD_init_clear
+    CMD_init_clear,
+    CMD_init_uwu
 };
 
 void register_command(const command_t* cmd) {
