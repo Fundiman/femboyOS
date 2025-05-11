@@ -3,12 +3,14 @@
 #include "../libs/interrupt.h"
 #include "../libs/keyboard.h"
 #include "../cmds/command_registry.h"
-// #include "../libs/net/ethernet.h"
-// #include "../libs/net/ip.h"
-// #include "../libs/net/icmp.h"
-// #include "../libs/types.h"
+#include "../libs/net/ethernet.h"
+#include "../libs/net/ip.h"
+#include "../libs/net/icmp.h"
+#include "../libs/types.h"
 #include "cli.h"
 #include "panic.h"
+
+// this might be my last commit due to me being banned from this software by the owner - @Abdullah Bhatti, 11 may 2025
 
 void kernel_main(uint32_t multiboot_magic, void* multiboot_info) {
     print_clear();
@@ -33,20 +35,20 @@ void kernel_main(uint32_t multiboot_magic, void* multiboot_info) {
 
 
 
-    // Network support comming in 2030 - ploszukiwacz
-    // print_str("Checking for network hardware...");
-    //     bool net_available = false;
+    // Network support may come in like few weeks - Fundiman
+    print_str("Checking for network hardware...");
+         bool net_available = false;
 
-    //     // Set a short timeout for network detection
-    //     uint64_t start_time = tick_count;
-    //     net_available = ethernet_init();
-    //     if (!net_available) {
-    //         print_str("not detected\n");
-    //     } else {
-    //         ip_init(0xC0A80164);  // 192.168.1.100
-    //         icmp_init();
-    //         print_str("initialized\n");
-    //     }
+        // Set a short timeout for network detection
+         uint64_t start_time = tick_count;
+         net_available = ethernet_init();
+         if (!net_available) {
+             print_str("not detected\n");
+         } else {
+             ip_init(0xC0A80164);  // 192.168.1.100
+             icmp_init();
+             print_str("initialized\n");
+         }
 
     // Initialize and run the command line interface
     cli_init();
